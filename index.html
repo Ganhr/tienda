@@ -1,0 +1,394 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script>
+var nom;
+var nombre;
+var ancho;
+function nombre(){
+nombre=document.getElementById("txtNom").value;
+ancho=nombre.length;
+nom=nombre.toUpperCase();
+document.getElementById("txtNom").value=nom;
+for (x=0;x<=ancho-1;x++){
+	if(nombre.charAt(x)>='a' && nombre.charAt(x)<='z'|| nombre.charAt(x)==" ")
+	{
+	}
+	else 
+	{
+	alert("Son caracteres no validos");
+	nombre=document.getElementById("txtNom").value="";
+	break;
+	}
+	}
+	}
+	
+	
+	
+var email
+var ancho1;
+var num; 
+var n; 
+var u;
+var m;
+var v;
+function email(){
+email=document.getElementById("txtemal").value;
+ancho1=email.length;
+for(num=0; num<=ancho1-1; num++)
+ {
+	if(((email.charAt(0)>='0')&&(email.charAt(0)<='9'))||(email.charAt(0)=='@'))
+	{
+			alert("El primer caracter es no valido");
+		break;}
+else{
+					m=email.indexOf('.');
+					v=email.lastIndexOf('.');
+	          if(m!=v)
+			  {
+				  alert("Favor introducir solo un punto");
+				  break;
+			  }
+			  else{
+				  if((m==-1)&&(v==-1)){
+					  alert("Favor de introducir el punto");
+					  break;
+					  }
+	else 
+	{
+		n=email.indexOf('@');
+		u=email.lastIndexOf('@');
+		if(n!=u){
+			alert("Favor solo introducir un @");
+			break;
+		}
+		else{
+			if((n==-1)&&(u==-1))
+			{
+			alert("Favor de introducir @");	
+			break;
+	}			
+	}
+	}
+  }
+  }		
+  }
+  }
+
+	
+		function telefono(){
+		var numero, ancho2, n1;
+	numero=document.getElementById("txtel").value;
+	ancho2=numero.length;
+	for(x=0; x<=ancho2-1; x++){
+		n1=numero.charAt(x);
+	if(((n1>=0) && (n1<=9 ))|| (n1=='-'))
+	{
+		}
+		else{
+			alert("Favor de introducir solo numeros");
+				break;
+		}
+		}
+		}
+		
+		var asunto;
+		var mayu;
+		function asunto(){
+			asunto=document.getElementById("txtasun").value;
+			mayu=asunto.toUpperCase();
+			document.getElementById("txtasun").value=mayu;
+			
+			}
+var seguridad;
+  var segu
+	function seguridad(){
+    seguridad=document.getElementById("txtsegr").value;
+		segu=document.getElementById("txtseg").value;
+    if(seguridad==segu)
+	{
+		}
+    else{
+      alert("Favor de introducir bien el valor de seguridad");
+	document.getElementById("txtsegr").value="";
+    }
+	}
+	
+	
+var nom, email1, tel, asun, seg;
+var n, m, t, a, s, segr;			
+function enviar(){
+	nom=document.getElementById("txtNom").value;
+	email1=document.getElementById("txtemal").value;
+  tel=document.getElementById("txtel").value;
+  asun=document.getElementById("txtasun").value;
+  seg=document.getElementById("txtseg").value;
+    segr=document.getElementById("txtsegr").value;
+    n=nom.length;
+    m=email1.length;
+    t=tel.length;
+    a=asun.length;
+    s=seg.length;
+
+if((n==0) || (m==0) || (t==0) || (a==0) || (s==0))
+  {
+    alert("Favor de introducir los datos correctamente");
+  }
+  else{
+    alert("Su mensaje a sido enviado");
+    document.getElementById("txtNom").value="";
+    document.getElementById("txtemal").value="";
+    document.getElementById("txtel").value="";
+    document.getElementById("txtasun").value="";
+    document.getElementById("txtsegr").value="";
+	
+  }
+}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>~*BOUTIQUE INDMAR*~</h1>
+    </div>
+	<div data-role="content">
+    	<center><img src="landing_todomujer_ss.jpg" width="105%" height="30%"></center>
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes Somos?</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Autora:Indira Rojano Huesca</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes Somos?</h1>
+	</div>
+	<div data-role="content">	
+	 <center><h1>~*Boutique Idnmar*~</h1></center>
+    <h2>Misión</h2>
+     Somos una empresa dedicada a la venta de ropa para dama de      la más alta calidad,<br>satisfaciendo las necesidades que     exigen hoy en día la moda.
+     <br>
+     <br>
+     <br>
+    <br>
+     <center><img src="Vestido-de-gasa-corto-adelante-y-largo-atras-5.jpg" width="20%" height="10%"></center>
+<h2>Visión</h2>
+	Ser una empresa líder en el mercado de la moda a nivel nacional,<br>satisfaciendo las necesidades de nuestros clientes a través de un buen servicio e instalaciones.
+    <br>
+    <br>
+    <br>
+    <br>
+ <center><img src="blusas-blusones-vestidos-moda-asiatica-japonesa-super-trend-3493-MLM4218302125_042013-F.jpg" width="40%" height="25%"></center>
+<h2>Valores</h2>
+    Equidad: <br>
+    brindar un buen servicio a todo tipo de personas      sin discriminación alguna.<br>
+    <br>
+   Solidaridad:<br> 
+   brindar apoyo a cualquier persona que lo    requiera.<br>
+   <br>
+   Responsabilidad: <br>
+   ser totalmente responsable en cuanto    producto y servicio con nuestros clientes.<br>
+   <br>
+   Respeto:<br>
+    hablar o expresarse de la mejor manera a nuestros    clientes.  
+	
+	</div>
+	<div data-role="footer">
+		<h4>~*Indmar*~</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+<div data-role="header">
+		<h1>Productos</h1>
+	</div>
+	<div data-role="content">	
+    <center>
+    <img src="PicsArt_1402577565213.jpg" width="30%" height="5%"><img src="PicsArt_1402580794859.jpg" width="51%" height="51%"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>En la imagen como podemos ver les mostramos unos hermosos, comodos y lijeros vestidos de primavera y una blusa blanca de olanes</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="PicsArt_1402580435255.jpg" width="40%" height="5%"><img src="PicsArt_1402580258216.jpg" width="40%" height="20%">
+    <br>
+    <br>
+    <br>
+    <br>
+     <center>En la imagen como podemos ver les mostramos un vestido con un modelo hermoso tipo marinero y un outfits que consta de una blusa suelta con un cinturon ala cintura color cafe  y un pantalon rasgado muy ala moda</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="PicsArt_1402579777349.jpg" width="40%" height="20%"><img src="PicsArt_1402579649510.jpg" width="40%" height="20%">
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>En la imagen como podemos ver les mostramos un vestido que es suelto de la parte de abajo con moño de lado derecho que le da un toque aun mas femenino y un outfits que consta de un saco, una blusa tres cuartos blanca y unos jeans</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="PicsArt_1402579439458.jpg" width="40%" height="20%"><img src="PicsArt_1402578973867.jpg" width="40%" height="20%">
+    <br>
+    <br>
+    <br>
+    <br>
+     <center>En la imagen como podemos ver les mostramos un saco, una blusa suelta color melon y unos jeans y al lado les mostramos un outfits que consta de una blusa de tirantes blanca ,una falda de olanes color beige  y una chaqueta de mezclilla</center>
+    <br>
+    <br>
+    <br>
+    <br>
+   <img src="PicsArt_1402577706695.jpg" width="38%" height="3%"><img src="PicsArt_1402577378913.jpg" width="38%" height="3%">
+    <br>
+    <br>
+    <br>
+    <br>
+     <center>En la imagen como podemos ver les mostramos un vestido muy chic de manga larga con olanes y suelto de la parte de abajo y otro vestido muy elegante color balco descotado</center>
+    <br>
+    <br>
+    <br>
+    <br>
+   
+   
+<div data-role="footer"> 
+    <h4>~*Indmar*~</h4>
+	</div>
+</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">
+  <center> <img src="barby.jpg" width="30%" height="30%"> </center>
+   <br>
+     <center> NOMBRE:Barbara Andrade Trujillo<br>
+     EDAD:16 Años<br>
+     ESTUDIANTE:Tec.Programador<br>
+     EMPRESA:Make Up<br>
+    CEL:243-110-95-25<br>
+    DOMICILIO:calle 10 de abril sin numero<br>
+    Lic. de Cultora de Belleza<br>
+    PASA TIEMPOS:<br>
+    *jugar futbol<br>
+    *escuchar musica<br>
+    *pasar tiempo con la familia<br>
+    *convivir con sus amigos<br>
+    *ver televisión </center>
+   
+    <br>
+    <br>
+    <br>
+     <center><img src="indii.jpg" width="30%" height="30%"></center>
+     <br>
+    <center>NOMBRE:Rojano Huesca Indira<br>
+    EDAD:17 Años<br>
+    ESTUDIANTE:Tec.Programador<br>
+    EMPRESA:~*Indmar*~<br>
+    CEL:243-100-11-83<br>
+    DOMICILIO:Privada bugambilias#5<br>
+    Diseñadora de modas<br>
+    PASA TIEMPOS:<br>
+    *Hacer deporte<br>
+    *Escuchar musica<br>
+    *Pasar tiempo en familia y Amigos<br>
+    *Vailar<br>
+    *Hacer manualidades<br>
+    *Ver televisión</center>
+    
+   
+    
+ </div>
+	<div data-role="footer">
+		<h4>~*Indmar*~</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+	</div>
+    <br>
+    <br>
+  <center>Dirección:Bugambulias #5<br></center>
+<center>Correo:arid_girl10@hotmail.es<br></center>
+<center>Cel:243-100-11-83</center>
+<br>
+<br> 
+    
+	<div data-role="content">
+    <center><img src="landing_todomujer_ss.jpg" width="75%" height="15%"></center>
+<center><table width="0" border="0">
+  <tr>
+    <td>
+      <label for="textinput">Nombre:</label>
+     </td>
+    <td><input type="text" name="txtNom" id="txtNom"           value="" onBlur="nombre()"/></td>
+  </tr>
+  <tr>
+   <td>
+      <label for="textinput">Email:</label>
+     </td>
+    <td><input type="text" name="txtemal" id="txtemal" 
+    
+      onBlur="email()" value=""/></td> 
+  </tr>
+  <tr>
+   <td>
+      <label for="textinput">Teléfono:</label>
+     </td>
+    <td><input type="text" name="txtel" id="txtel" 
+      onBlur="telefono()" value=""/></td>
+  </tr>
+  <tr>
+   <td>
+      <label for="textinput">Asunto:</label>
+     </td>
+    <td><input type="text" name="txtasun" id="txtasun" 
+      onBlur="asunto()" value=""/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><center>Seguridad</center></td>
+  </tr>
+  <tr>
+   <td>
+      <input type="text" name="txtseg" id="txtseg" disabled="disabled" value="*-*Indmar*-*"/>
+     </td>
+     
+    <td><input type="text" name="txtsegr" id="txtsegr"       onBlur="seguridad()" value=""/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button onClick="enviar()">Enviar</button></td>
+  </tr>
+</table></center>
+		
+	</div>
+	<div data-role="footer">
+		<h4>~*Indmar*~</h4>
+	</div>
+</div>
+
+
+</body>
+</html>
